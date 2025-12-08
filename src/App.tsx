@@ -15,7 +15,7 @@ function Page() {
   const onChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e) => {
     setText(e.currentTarget.value);
   };
-  const convertedText = text.replaceAll(/\s*\w+/g, (match) => `||${match}||`);
+  const convertedText = text.replaceAll(/\s*\S+/g, (match) => `||${match}||`);
   return (
     <Box>
       <Heading>LeafCaliber Spoiler Trolling Tool</Heading>
